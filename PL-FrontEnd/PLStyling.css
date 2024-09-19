@@ -20,8 +20,8 @@ body {
     margin-bottom: 2rem;
     width: 100%;
     height: 5rem;
-    border: 2px solid black;
-    border-radius: 5px;
+    border: 1.5px solid black;
+    border-radius: 10px;
     text-align: center;
 }
 
@@ -38,8 +38,8 @@ body {
     margin-left: .5rem;
     width: 10rem;
     height: 100%;
-    border: 2px solid black;
-    background-color: aqua;
+    border: 1.5px solid black;
+    border-radius: 10px;
 }
 
 .interacting-window {
@@ -47,26 +47,28 @@ body {
     height: 100%;
     display: grid;
     grid-template-columns: 1.8fr 1.2fr;
+    gap: 10px;
 }
 
 .rows-container {
-    background-color: violet;
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
 
 .rows-area {
-    width: 80%;
+    width: 100%;
     height: 35rem;
-    background-color: crimson;
+    border: 1.5px solid black;
     border-radius: 10px;
 }
 
+table {
+    width: 100%;
+}
+
 .information-window-wrap {
-    background-color: rgb(69, 204, 209);
     display: flex;
-    align-items: center;
     flex-direction: column;
     justify-content: center;
 }
@@ -78,7 +80,7 @@ body {
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
     border: 1.5px solid black;
-    background-color: brown;
+    border-bottom: 0;
 }
 
 .information-area {
@@ -88,5 +90,4 @@ body {
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
     border: 1.5px solid black;
-    background-color: chartreuse;
 }
