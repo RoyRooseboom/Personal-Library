@@ -1,0 +1,20 @@
+.interacting-window {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1.8fr 1.2fr;
+    gap: 10px;
+}
+
+.rows-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.rows-area {
+    width: 100%;
+    height: 35rem;
+    border: 1.5px solid black;
+    border-radius: 10px;
+}

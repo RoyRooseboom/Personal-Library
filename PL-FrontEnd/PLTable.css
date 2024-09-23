@@ -1,0 +1,26 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+tbody {
+    text-align: center;
+}
+
+tr {
+    border-bottom: 1px solid #c4c4c4;
+}
+
+tr:nth-child(even) {
+    background-color: #d1f5f5;
+}
+
+button {
+    width: 100%;
+    border: none;
+    background-color: inherit;
+}
+
+button:hover {
+    cursor: pointer;
+}

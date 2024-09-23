@@ -1,0 +1,24 @@
+.information-window-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.img-area {
+    width: 25rem;
+    height: 20rem;
+    border-radius: 10px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border: 1.5px solid black;
+    border-bottom: 0;
+}
+
+.information-area {
+    width: 25rem;
+    height: 15rem;
+    border-radius: 10px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border: 1.5px solid black;
+}
