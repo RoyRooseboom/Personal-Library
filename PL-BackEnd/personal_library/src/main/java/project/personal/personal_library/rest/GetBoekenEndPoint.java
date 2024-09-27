@@ -15,7 +15,7 @@ public class GetBoekenEndPoint
     BoekenService boekenService;
 
     @CrossOrigin
-    @GetMapping("alleboeken")
+    @GetMapping("geefAlleBoeken")
     public Iterable<Boek> alleBoeken()
     {
         return boekenService.geefAlleBoeken();
