@@ -11,7 +11,7 @@ public class Boek
 
     private String title;
     private String author;
-    private int isbn;
+    private int isbn;  // TODO: Specify how long the isbn can be
     private String genre;
     private String langauge;
     private String date;
