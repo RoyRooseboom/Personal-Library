@@ -1,20 +1,40 @@
 package project.personal.personal_library.domain;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+
+import java.math.BigInteger;
+import java.sql.Date;
 
 @Entity
 public class Boek
 {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
+    @Column(nullable = false)
     private String title;
+
+    @Column(nullable = false)
     private String author;
-    private int isbn;  // TODO: Specify how long the isbn can be
+
+    @Column(nullable = false, columnDefinition = "bigint(13)")
+    private int isbn;
+
+    @Column(nullable = true)
     private String genre;
+
+    @Column(nullable = true)
     private String langauge;
-    private String date;
+
+    @Column(nullable = true)
+    private Date date;
+
+    @Column(nullable = true)
+    private String description;
+
+    @Column(columnDefinition = "TEXT")
+    private String picture;
 
     public long getId() {
         return id;
@@ -64,11 +84,27 @@ public class Boek
         this.langauge = langauge;
     }
 
-    public String getDate() {
+    public Date getDate() {
         return date;
     }
 
-    public void setDate(String date) {
+    public void setDate(Date date) {
         this.date = date;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getPicture() {
+        return picture;
+    }
+
+    public void setPicture(String picture) {
+        this.picture = picture;
     }
 }
