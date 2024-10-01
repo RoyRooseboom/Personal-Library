@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="PLTable.css" >
     <link rel="stylesheet" href="PLInteracting.css" >
     <link rel="stylesheet" href="PLInformation.css" >
-    <script src="PLRequests.js"></script>
+    <script src="PLFirstLoad.js"></script>
+    <script src="PLButtons.js"></script>
 </head>
 <body>
     <div id="main-wrap">
@@ -18,7 +19,10 @@
         </div>
 
         <div class="grid-container">
-            <div class="left-bar"></div>
+            <div class="button-row">
+                <button onclick="goToMyBooks()">My Books</button>
+                <button onclick="goToWishList()">Add Books To Wishlist</button>
+            </div>
         
             <div class="interacting-window">
                 <div class="rows-container">
@@ -45,6 +49,10 @@
                         <p>Information!</p>
                     </div>
                 </div>
+            </div>
+
+            <div class="wishlist">
+
             </div>
         </div>
     </div>
