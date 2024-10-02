@@ -20,24 +20,19 @@ body {
     margin-bottom: 2rem;
     width: 100%;
     height: 5rem;
-    border: 1.5px solid black;
-    border-radius: 10px;
+    border-bottom: 1.5px solid black;
     text-align: center;
 }
 
 .grid-container {
-    display: grid;
-    grid-template-columns: 10rem 1fr;
-    grid-gap: 40px;
     height: 50rem;
-    margin-bottom: 1rem;
-    margin-right: 1rem;
 }
 
-.left-bar {
-    margin-left: .5rem;
-    width: 10rem;
-    height: 100%;
-    border: 1.5px solid black;
-    border-radius: 10px;
+.button-row {
+    align-items: center;
+}
+
+.disable {
+    display: none;
+    visibility: hidden;
 }

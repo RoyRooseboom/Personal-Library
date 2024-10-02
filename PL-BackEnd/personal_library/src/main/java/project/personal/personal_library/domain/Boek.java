@@ -36,6 +36,9 @@ public class Boek
     @Column(columnDefinition = "TEXT")
     private String picture;
 
+    @Column(nullable = false)
+    private String wishlist;
+
     public long getId() {
         return id;
     }
@@ -106,5 +109,13 @@ public class Boek
 
     public void setPicture(String picture) {
         this.picture = picture;
+    }
+
+    public String getWishlist() {
+        return wishlist;
+    }
+
+    public void setWishlist(String wishlist) {
+        this.wishlist = wishlist;
     }
 }
