@@ -8,4 +8,5 @@ function goToMyBooks()
 {
     document.querySelector(".wishlist").classList.add("disable");
     document.querySelector(".interacting-window").classList.remove("disable");
+    booksRequest();
 }

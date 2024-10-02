@@ -1,4 +1,4 @@
-export function booksRequest()
+function booksRequest()
 {
     const httpRequest = new XMLHttpRequest();
 
