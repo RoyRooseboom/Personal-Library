@@ -1,9 +1,11 @@
 .interacting-window {
-    width: 100%;
+    width: 90%;
     height: 100%;
     display: grid;
     grid-template-columns: 1.8fr 1.2fr;
     gap: 10px;
+    position: relative;
+    left: 5rem;
 }
 
 .rows-container {
