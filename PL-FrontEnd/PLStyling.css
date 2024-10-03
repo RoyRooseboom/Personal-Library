@@ -31,6 +31,7 @@ body {
 .button-row {
     position: relative;
     left: 5rem;
+    width: 90%;
 }
 
 .button {
@@ -46,6 +47,6 @@ body {
 }
 
 .disable {
-    display: none;
+    display: none !important;
     visibility: hidden;
 }
