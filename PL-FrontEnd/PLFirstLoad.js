@@ -1,5 +1,5 @@
 window.onload = (event) =>
 {
-    document.querySelector(".wishlist").classList.add("disable");
+    document.querySelector(".add-books").classList.add("disable");
     booksRequest();
 }

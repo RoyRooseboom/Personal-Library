@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="PLTable.css" >
     <link rel="stylesheet" href="PLInteracting.css" >
     <link rel="stylesheet" href="PLInformation.css" >
+    <link rel="stylesheet" href="PLAddBooks.css">
     <script src="PLFirstLoad.js"></script>
     <script src="PLButtons.js"></script>
     <script src="PLRequests.js"></script>
@@ -22,7 +23,7 @@
         <div class="grid-container">
             <div class="button-row">
                 <button onclick="goToMyBooks()" class="button">My Books</button>
-                <button onclick="goToWishList()" class="button">Add Books To Wishlist</button>
+                <button onclick="goToAddBooks()" class="button">Add Books</button>
             </div>
         
             <div class="interacting-window">
@@ -53,8 +54,39 @@
                 </div>
             </div>
 
-            <div class="wishlist">
+            <div class="add-books">
+                <form action="http://localhost:8080/" method="post">
+                    <label for="title">Title</label>
+                    <input type="text" id="title" name="title" required>
 
+                    <label for="author">Author</label>
+                    <input type="text" id="author" name="author" required>
+
+                    <label for="isbn">ISBN</label>
+                    <input type="number" id="isbn" name="isbn" minlength="13" required>
+
+                    <label for="genre">Genre</labeL>
+                    <input type="text" id="genre" name="genre">
+
+                    <label for="langauge">Langauge</label>
+                    <input type="text" id="langauge" name="langauge">
+
+                    <label for="date">Date</label>
+                    <input type="date" id="date" name="date">
+
+                    <label for="wishlist">Wishlist
+                        <input type="checkbox" id="wishlist" name="wishlist">
+                    </label>
+
+
+                    <label for="description">Description</label>
+                    <textarea name="description" id="description"></textarea>
+
+                    <label for="picture">Picture</label>
+                    <input type="file" id="picture" name="picture" accept="image/*">
+
+                    <input type="submit">
+                </form>
             </div>
         </div>
     </div>
