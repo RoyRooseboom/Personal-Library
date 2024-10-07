@@ -19,7 +19,7 @@ public class Boek
     private String author;
 
     @Column(nullable = false, columnDefinition = "bigint(13)")
-    private int isbn;
+    private long isbn;
 
     @Column(nullable = true)
     private String genre;
@@ -63,11 +63,11 @@ public class Boek
         this.author = author;
     }
 
-    public int getIsbn() {
+    public long getIsbn() {
         return isbn;
     }
 
-    public void setIsbn(int isbn) {
+    public void setIsbn(long isbn) {
         this.isbn = isbn;
     }
 
