@@ -13,10 +13,17 @@ function goToAddBooks ()
 
 function showInformation()
 {
-    document.querySelector(".information-area").innerHTML = localStorage.getItem("description");
-    document.querySelector(".information-area").innerHTML += localStorage.getItem("genre");
-    document.querySelector(".information-area").innerHTML += localStorage.getItem("date");
-    document.querySelector(".information-area").innerHTML += localStorage.getItem("langauge");
-    document.querySelector(".information-area").innerHTML += localStorage.getItem("wishlist");
-    document.querySelector(".information-area").innerHTML += localStorage.getItem("isbn");
+    HTMLString = "";
+    HTMLString += "<table><tr><td>Langauge: " + localStorage.getItem("langauge") + "</td>" + "<td>Wishlist: " + localStorage.getItem("wishlist") + "</td> </tr>" +
+      "<tr>" +
+      "<td>Date: " + localStorage.getItem("date") + "</td>" + "<td>Genre: " + localStorage.getItem("genre") + "</td> </tr>" +
+      "<tr>" +
+      "<td>ISBN: " + localStorage.getItem("isbn") + "</td> </tr>" +
+      "<tr>" +
+      "<td colspan=2>" + localStorage.getItem("description") + "</td> </tr>" +
+      "</table>";
+
+    document.getElementById("info").innerHTML = HTMLString;
+
+    // document.querySelector(".information-area").innerHTML = localStorage.getItem("description");
 }

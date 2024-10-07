@@ -6,7 +6,7 @@ function booksRequest()
         var parsedResponseText = JSON.parse(this.responseText);
         HTMLString = "";
         for(var i = 0; i < parsedResponseText.length; i++) {
-            HTMLString += "<tr><td><input type='checkbox'></td><td><button onclick='showInformation()' class='table-button'>" + parsedResponseText[i].title + "</button></td><td>" + parsedResponseText[i].author + "</td></tr>";
+            HTMLString += "<tr><td><input type='checkbox'></td><td colspan=2><button onclick='showInformation()' class='table-button make-one-row'>" + "<p>" +parsedResponseText[i].title + "</p>" + "<p>" + parsedResponseText[i].author + "</p>" + "</button></td></tr>";
             localStorage.setItem("description", parsedResponseText[i].description);
             localStorage.setItem("genre", parsedResponseText[i].genre);
             localStorage.setItem("date", parsedResponseText[i].date);

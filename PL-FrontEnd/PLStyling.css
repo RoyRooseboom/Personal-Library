@@ -50,3 +50,15 @@ body {
     display: none !important;
     visibility: hidden;
 }
+
+p {
+    margin: 0;
+    padding: 5px;
+}
+
+.make-one-row {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    justify-content: space-around;
+}
