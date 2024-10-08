@@ -6,13 +6,7 @@ function booksRequest()
         var parsedResponseText = JSON.parse(this.responseText);
         HTMLString = "";
         for(var i = 0; i < parsedResponseText.length; i++) {
-            HTMLString += "<tr><td><input type='checkbox'></td><td colspan=2><button onclick='showInformation()' class='table-button make-one-row'>" + "<p>" +parsedResponseText[i].title + "</p>" + "<p>" + parsedResponseText[i].author + "</p>" + "</button></td></tr>";
-            localStorage.setItem("description", parsedResponseText[i].description);
-            localStorage.setItem("genre", parsedResponseText[i].genre);
-            localStorage.setItem("date", parsedResponseText[i].date);
-            localStorage.setItem("langauge", parsedResponseText[i].langauge);
-            localStorage.setItem("wishlist", parsedResponseText[i].wishlist);
-            localStorage.setItem("isbn", parsedResponseText[i].isbn);
+            HTMLString += "<tr><td><input type='checkbox'></td><td colspan=2><button onclick='showInformation("+ JSON.stringify(parsedResponseText[i]) +")' class='table-button make-one-row'>" + "<p>" +parsedResponseText[i].title + "</p>" + "<p>" + parsedResponseText[i].author + "</p>" + "</button></td></tr>";
         }
         
         document.getElementById("booksTable").innerHTML = HTMLString;
