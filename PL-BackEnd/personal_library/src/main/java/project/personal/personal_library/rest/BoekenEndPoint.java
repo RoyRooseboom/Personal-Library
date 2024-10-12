@@ -2,14 +2,12 @@ package project.personal.personal_library.rest;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import project.personal.personal_library.domain.Boek;
 import project.personal.personal_library.persistance.BoekenService;
 
 @RestController
-public class GetBoekenEndPoint
+public class BoekenEndPoint
 {
     @Autowired
     BoekenService boekenService;
@@ -19,5 +17,12 @@ public class GetBoekenEndPoint
     public Iterable<Boek> alleBoeken()
     {
         return boekenService.geefAlleBoeken();
+    }
+
+    @CrossOrigin
+    @PostMapping("addBook")
+    public void addBook(@RequestBody Boek b)
+    {
+        boekenService.addBoek(b);
     }
 }

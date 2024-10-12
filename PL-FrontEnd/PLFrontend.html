@@ -56,8 +56,8 @@
                 </div>
             </div>
 
-            <div class="add-books">
-                <form action="http://localhost:8080/" method="post">
+            <div class="add-books disable">
+                <form id="bookForm">
                     <label for="title">Title</label>
                     <input type="text" id="title" name="title" required>
 
@@ -87,7 +87,7 @@
                     <label for="picture">Picture</label>
                     <input type="file" id="picture" name="picture" accept="image/*">
 
-                    <input type="submit">
+                    <input type="submit" onclick="addBook()">
                 </form>
             </div>
         </div>
