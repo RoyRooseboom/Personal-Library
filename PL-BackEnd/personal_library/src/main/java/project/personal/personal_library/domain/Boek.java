@@ -33,7 +33,7 @@ public class Boek
     @Column(nullable = true)
     private String description;
 
-    @Column(columnDefinition = "TEXT")
+    @Column(columnDefinition = "LONGTEXT")
     private String picture;
 
     @Column(nullable = false)

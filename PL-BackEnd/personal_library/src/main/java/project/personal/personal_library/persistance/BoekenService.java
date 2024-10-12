@@ -14,4 +14,9 @@ public class BoekenService
     {
         return boekenRepository.findAll();
     }
+
+    public void addBoek(Boek b)
+    {
+        boekenRepository.save(b);
+    }
 }

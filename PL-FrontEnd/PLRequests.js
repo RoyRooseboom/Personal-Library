@@ -1,7 +1,7 @@
+const httpRequest = new XMLHttpRequest();
+
 function booksRequest()
 {
-    const httpRequest = new XMLHttpRequest();
-
     httpRequest.onload = function() {
         var parsedResponseText = JSON.parse(this.responseText);
         HTMLString = "";
@@ -14,4 +14,13 @@ function booksRequest()
 
     httpRequest.open("GET", "http://localhost:8080/geefAlleBoeken");
     httpRequest.send();
+}
+
+
+async function sendBook(book)
+{
+    var data = JSON.stringify(book);
+    httpRequest.open("POST", "http://localhost:8080/addBook");
+    httpRequest.setRequestHeader("Content-Type", "application/json");
+    httpRequest.send(data);
 }
