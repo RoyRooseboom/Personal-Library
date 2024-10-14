@@ -65,7 +65,7 @@
                     <input type="text" id="author" name="author" required>
 
                     <label for="isbn">ISBN</label>
-                    <input type="number" id="isbn" name="isbn" minlength="13" required>
+                    <input type="text" id="isbn" name="isbn" pattern="\d{10,13}" required>
 
                     <label for="genre">Genre</labeL>
                     <input type="text" id="genre" name="genre">
@@ -87,7 +87,7 @@
                     <label for="picture">Picture</label>
                     <input type="file" id="picture" name="picture" accept="image/*">
 
-                    <input type="button" onclick="addBook()">
+                    <input type="submit" onclick="addBook()">
                 </form>
             </div>
         </div>

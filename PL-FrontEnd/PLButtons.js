@@ -15,19 +15,22 @@ async function addBook()
 {
     var pictureString = "";
 
-    let promise = new Promise(function(resolve) 
+    if(document.getElementById("picture").files.length > 0)
     {
-        var reader = new FileReader();
-        reader.readAsDataURL(document.getElementById("picture").files[0]);
-        reader.onloadend = () =>
+        let promise = new Promise(function(resolve)
         {
-            resolve(reader.result);
-        }
-    });
-    
-    await promise.then(
-        function(value) {pictureString = value}
-    );
+            var reader = new FileReader();
+            reader.readAsDataURL(document.getElementById("picture").files[0]);
+            reader.onloadend = () =>
+            {
+                resolve(reader.result);
+            }
+        });
+
+        await promise.then(
+            function(value) {pictureString = value}
+        );
+    }
 
     var book = {
         title: document.getElementById("title").value,
