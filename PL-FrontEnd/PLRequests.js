@@ -17,7 +17,7 @@ function booksRequest()
 }
 
 
-async function sendBook(book)
+function sendBook(book)
 {
     var data = JSON.stringify(book);
     httpRequest.open("POST", "http://localhost:8080/addBook");

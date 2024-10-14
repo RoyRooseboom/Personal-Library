@@ -1,14 +1,15 @@
 function showInformation(whatBook)
 {
     HTMLString = "";
-    HTMLString += "<table><tr><td>Langauge: " + whatBook.langauge + "</td>" + "<td>Wishlist: " + whatBook.wishlist + "</td> </tr>" +
+    HTMLString += "<table><tr><td><b>Language: </b>" + whatBook.langauge + "</td>" + "<td><b>Wishlist: </b>" + whatBook.wishlist + "</td> </tr>" +
       "<tr>" +
-      "<td>Date: " + whatBook.date + "</td>" + "<td>Genre: " + whatBook.genre + "</td> </tr>" +
+      "<td><b>Date: </b>" + whatBook.date + "</td>" + "<td><b>Genre: </b>" + whatBook.genre + "</td> </tr>" +
       "<tr>" +
-      "<td>ISBN: " + whatBook.isbn + "</td> </tr>" +
+      "<td><b>ISBN: </b>" + whatBook.isbn + "</td> </tr>" +
       "<tr>" +
       "<td colspan=2>" + whatBook.description + "</td> </tr>" +
       "</table>";
 
     document.getElementById("info").innerHTML = HTMLString;
+    document.getElementById("img-id").src = whatBook.picture;
 }

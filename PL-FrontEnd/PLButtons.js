@@ -21,8 +21,7 @@ async function addBook()
         reader.readAsDataURL(document.getElementById("picture").files[0]);
         reader.onloadend = () =>
         {
-            var positionToBreak = reader.result.indexOf(",");
-            resolve(reader.result.slice(positionToBreak + 1));
+            resolve(reader.result);
         }
     });
     
