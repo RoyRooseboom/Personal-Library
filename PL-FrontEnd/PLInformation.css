@@ -12,6 +12,16 @@
     border-bottom-right-radius: 0px;
     border: 1.5px solid black;
     border-bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#img-id {
+    width: 97%;
+    height: 97%;
+    object-fit: contain;
+    border-radius: 5px;
 }
 
 .information-area {
