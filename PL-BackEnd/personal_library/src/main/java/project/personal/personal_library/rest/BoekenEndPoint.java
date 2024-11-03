@@ -25,4 +25,14 @@ public class BoekenEndPoint
     {
         boekenService.addBoek(b);
     }
+
+    @CrossOrigin
+    @DeleteMapping("deleteBook")
+    public void deleteBook(@RequestBody int[] id)
+    {
+        for(int i : id)
+        {
+            boekenService.deleteBoek(i);
+        }
+    }
 }

@@ -11,6 +11,23 @@ function goToAddBooks ()
     document.querySelector(".interacting-window").classList.add("disable");
 }
 
+function deleteBooks()
+{
+    var checkedBoxes = document.getElementsByClassName("checkboxID");
+    const booksToDelete = [];
+
+    for(var i = 0; i < checkedBoxes.length; i++)
+    {
+        if(checkedBoxes[i].checked)
+        {
+            booksToDelete.push(checkedBoxes[i].value);
+        }
+    }
+
+    sendDeleteBook(booksToDelete);
+    window.location.reload();
+}
+
 async function addBook()
 {
     var pictureString = "";

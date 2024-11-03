@@ -19,4 +19,9 @@ public class BoekenService
     {
         boekenRepository.save(b);
     }
+
+    public void deleteBoek(long id)
+    {
+        boekenRepository.deleteById(id);
+    }
 }
